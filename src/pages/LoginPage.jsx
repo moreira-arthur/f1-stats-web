@@ -6,6 +6,8 @@ import f1_logo from '../assets/f1_logo.png';
 import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input"
 
+import LoginPageInput from '@/components/LoginPageInput';
+
 export default function LoginPage() {
 
     const navigate = useNavigate();
@@ -27,14 +29,8 @@ export default function LoginPage() {
                     </div>
                     <Separator className='w-full h-1 bg-gray-300 mb-'/>
                     <div className='flex flex-col items-center justify-start w-full h-full mt-5'>
-                        <div className='flex flex-col items-start justify-start w-full h-fit mb-5'>
-                            <label className='text-xs mb-2'>Username</label>
-                            <Input type={"text"} placeholder="Enter your username"></Input>
-                        </div>
-                        <div className='flex flex-col items-start justify-start w-full h-fit mb-5'>
-                            <label className='text-xs mb-2'>Password</label>
-                            <Input type={"password"} placeholder="Enter your password"></Input>
-                        </div>
+                        <LoginPageInput label='Username' type='email' placeholder='Enter your username'/>
+                        <LoginPageInput label='Password' type='password' placeholder='Enter your password'/>
                         <div className='w-full h-full'>
                             <button type='submit'className='text-white bg-red-600 font-titillium rounded bg-red 600 rounded w-2/10 h-1/5 mt-6 flex items-center border-2 border-transparent justify-center text-xs cursor-pointer hover:bg-white hover:text-red-600 hover:border-red-600
                             transition-colors duration-200'>SIGN IN</button>
