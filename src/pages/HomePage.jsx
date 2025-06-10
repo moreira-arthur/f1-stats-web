@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { GoChevronDown } from "react-icons/go";
 import f1_live_hero from '../assets/f1-live-hero.avif';
@@ -7,6 +8,9 @@ import { Button } from '@/components/ui/button';
 import NavBarButton from '@/components/NavBarButton';
 
 export default function HomePage() {
+    
+    const navigate = useNavigate();
+
     return(
         <div className='flex flex-col items-start h-screen w-screen' style={{
             backgroundImage: `url(${f1_live_hero})`,
@@ -23,7 +27,7 @@ export default function HomePage() {
                     <NavBarButton text='Grupo'/>
                 </div>
                 <div className='flex flex-col items-end justify-center h-full w-2/5'>
-                    <Button className='mr-10' size='lg'>Login</Button>
+                    <Button className='mr-10 cursor-pointer text-white hover:bg-white hover:text-red-600 transition-colors duration-200' size='lg' onClick={()=>navigate('/login')}>Login</Button>
                 </div>
             </div>
         </div>

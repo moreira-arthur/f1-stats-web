@@ -1,26 +1,45 @@
 import React from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
 import f1_logo from '../assets/f1_logo.png';
+import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input"
 
 export default function LoginPage() {
+
+    const navigate = useNavigate();
+
     return(
         <div className='flex flex-col items-start h-screen w-screen' style={{ backgroundColor: '#f8f7ef'}}>   
             <div className='flex flex-row items-center justify-start w-screen h-2/10 ' style={{ backgroundColor: 'rgb(21, 21, 30)'}} >
                 <div className='flex flex-row items-center w-7/10 h-full'>
                     <div className='flex flex-col items-start justify-center h-fit w-2/10 ml-10 mr-10'>
-                        <img src={f1_logo}/>
+                        <img src={f1_logo} className="cursor-pointer" onClick={()=>navigate("/")}/>
                     </div>
                 </div>
             </div>
             <div className='flex flex-row items-center justify-start w-screen h-1/10 ' style={{ backgroundColor: '#38383f'}} />
-            <div className='flex flex-col items-center justify-center w-full h-7/10' style={{ backgroundColor: '#f8f7ef'}}>
-                <div className='flex flex-col items-center justify-center w-4/10 h-full bg-white shadow-lg rounded-lg'>
-                    <h1 className='text-3xl font-bold text-center mb-4'>Login</h1>
-                    <form className='flex flex-col items-center'>
-                        <input type='text' placeholder='Username' className='mb-2 p-2 border border-gray-300 rounded w-64'/>
-                        <input type='password' placeholder='Password' className='mb-4 p-2 border border-gray-300 rounded w-64'/>
-                        <button type='submit' className='bg-blue-500 text-white p-2 rounded w-64'>Login</button>
-                    </form>
+            <div className='flex flex-col items-center justify-center w-full h-full' style={{ backgroundColor: '#f8f7ef'}}>
+                <div className='flex flex-col items-center justify-start w-4/10 h-full rounded-lg'>
+                    <div className='flex flex-col items-start justify-center w-full h-1/5'>
+                        <h1 className='text-3xl font-titillium text-center'>SIGN IN</h1>
+                    </div>
+                    <Separator className='w-full h-1 bg-gray-300 mb-'/>
+                    <div className='flex flex-col items-center justify-start w-full h-full mt-5'>
+                        <div className='flex flex-col items-start justify-start w-full h-fit mb-5'>
+                            <label className='text-xs mb-2'>Username</label>
+                            <Input type={"text"} placeholder="Enter your username"></Input>
+                        </div>
+                        <div className='flex flex-col items-start justify-start w-full h-fit mb-5'>
+                            <label className='text-xs mb-2'>Password</label>
+                            <Input type={"password"} placeholder="Enter your password"></Input>
+                        </div>
+                        <div className='w-full h-full'>
+                            <button type='submit'className='text-white bg-red-600 font-titillium rounded bg-red 600 rounded w-2/10 h-1/5 mt-6 flex items-center border-2 border-transparent justify-center text-xs cursor-pointer hover:bg-white hover:text-red-600 hover:border-red-600
+                            transition-colors duration-200'>SIGN IN</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
