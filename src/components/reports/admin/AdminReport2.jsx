@@ -46,7 +46,7 @@ export default function AdminReport2() {
                     type="text"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
-                    placeholder="Digite o nome da cidade (ex: Sao Paulo)"
+                    placeholder="Digite o nome da cidade (ex: São Paulo)"
                     className="flex-grow"
                 />
                 <Button type="submit" disabled={loading}>
