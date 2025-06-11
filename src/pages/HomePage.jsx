@@ -8,7 +8,7 @@ import { GoChevronDown } from "react-icons/go";
 
 // Seus assets
 import f1_live_hero from '../assets/f1-live-hero.avif';
-import F1_75_Logo from '../assets/F1_75_Logo.png';
+import f1 from '../assets/f1.png';
 
 // Um componente local para os cards de funcionalidades para manter o código limpo
 const FeatureCard = ({ icon, title, description, features }) => (
@@ -30,9 +30,9 @@ export default function HomePage() {
     return (
         <div className="bg-background font-titillium">
             {/* Header Minimalista e Fixo */}
-            <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-transparent">
-                <img src={F1_75_Logo} alt="F1 Logo" className="h-8 w-auto" />
-                <Button variant="outline" className="bg-white/20 backdrop-blur-sm border-white/50 text-white hover:bg-white hover:text-primary" onClick={() => navigate('/login')}>
+            <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-top p-4 bg-transparent">
+                <img src={f1} alt="F1 Logo" className="'flex flex-col items-start justify-center h-fit w-2/12 ml-10 mr-10'" />
+                <Button variant="outline" className="bg-white/20 backdrop-blur-sm border-white/50 text-white hover:bg-white hover:text-primary text-2xl" onClick={() => navigate('/login')}>
                     Login
                 </Button>
             </header>
