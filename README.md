@@ -1,12 +1,62 @@
-# React + Vite
+# F1 Stats Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+1. **Clone the repository:**
+    ```sh
+    git clone <https://github.com/moreira-arthur/f1-stats-web>
+    cd f1-stats-web
+    ```
+2. **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running the Project
 
-## Expanding the ESLint configuration
+Start the development server with:
+```sh
+npm run dev
+```
+This will launch the app at [http://localhost:5173](http://localhost:5173) (or another port if 5173 is in use).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Building for Production
+
+To build the project for production:
+```sh
+npm run build
+```
+The output will be in the `dist/` folder.
+
+## Linting
+
+To check for lint errors:
+```sh
+npm run lint
+```
+
+## Project Structure
+
+```
+src/            # Main source code
+  components/   # React components (dashboards, reports, UI elements)
+  pages/        # Page-level components (Home, Login, Dashboard, Reports)
+  context/      # React context for authentication
+  services/     # API service functions
+  lib/          # Utility functions
+  assets/       # Static images and assets
+public/         # Static files (e.g., SVGs)
+index.html      # Main HTML file
+```
+
+## Context
+
+This project is designed for Formula 1 data management and analytics. It supports different user roles, each with tailored dashboards and reports:
+
+- **Admins:** Manage the database and view global F1 statistics.
+- **Teams:** Analyze their own performance, manage pilots, and upload pilot data.
+- **Drivers:** Track their career stats and race results.
+
+## License
+
+MIT
