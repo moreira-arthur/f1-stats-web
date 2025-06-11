@@ -41,7 +41,7 @@ export default function UploadPilotsForm() {
     return (
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-full">
             <h3 className="text-lg font-bold text-gray-800 mb-4">Inserir Novos Pilotos (via Arquivo)</h3>
-            <p className="text-xs text-gray-500 mb-4">Envie um arquivo de texto (.txt ou .csv) com os dados dos pilotos, um por linha. Formato: `Driverref,Number,Code,Forename,Surname,DateOfBirth,Nationality`</p>
+            <p className="text-xs text-gray-500 mb-4">Envie um arquivo de texto (.txt ou .csv) com os dados dos pilotos, um por linha. Formato: `Driverref,Number,Code,Forename,Surname,DateOfBirth,Nationality,URL`</p>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <Input
                     type="file"
